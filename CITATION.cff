@@ -1,0 +1,15 @@
+cff-version: 1.2.0
+message: "If you use this work, please cite the paper below."
+title: "From Pixels to Reality: Physical-Digital Patch Attacks on Real-World Camera"
+type: article
+authors:
+  - family-names: Leonenkova
+    given-names: Victoria
+  - family-names: Shumitskaya
+    given-names: Ekaterina
+  - family-names: Vatolin
+    given-names: Dmitriy
+  - family-names: Antsiferova
+    given-names: Anastasia
+url: "https://arxiv.org/abs/2603.28425"
+year: 2026
