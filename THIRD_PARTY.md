@@ -20,7 +20,3 @@ The source README distinguishes the MIT code license from the separate terms for
 - License: Apache-2.0; the upstream license is included in `dipa/backbones/LICENSE.magface`.
 
 The original `inference/gen_feat.py` and `inference/network_inf.py` were consulted for preprocessing and checkpoint prefixes; they are not bundled. The configured BGR `[0,1]` input follows that original inference implementation.
-
-## Supplied notebook
-
-The supplied `CameraDemo.ipynb` referenced Tencent TFace / Sibling-Attack. Its FR/attribute optimization loop is not included here; the new optimization follows the DiPA paper instead. The notebook was used to identify differences and recover the example canvas, rectangle and iteration count. No Colab notebook or third-party checkpoint is bundled.
