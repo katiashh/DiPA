@@ -2,7 +2,7 @@
 
 Script-based implementation of **From Pixels to Reality: Physical-Digital Patch Attacks on Real-World Camera** (Leonenkova et al., 2026).
 
-[Paper](https://arxiv.org/abs/2603.28425) · [Method details](docs/method.md) · [Weights](weights/README.md) · [Русский](README_RU.md)
+[Paper](https://arxiv.org/abs/2603.28425](https://ieeexplore.ieee.org/abstract/document/11585403) · [Method details](docs/method.md) · [Weights](weights/README.md) 
 
 DiPA learns a personalized patch by minimizing the sum of cosine similarities between a patched face and the same clean face across ArcFace, CosFace and MagFace. Median pooling is applied to the patch before compositing. `DiPA+TV` adds isotropic total variation to the objective.
 
@@ -98,14 +98,15 @@ Tests cover the objective direction, median gradients, TV, patch placement, chec
 ## Citation and third-party code
 
 ```bibtex
-@misc{leonenkova2026dipa,
-  title={From Pixels to Reality: Physical-Digital Patch Attacks on Real-World Camera},
+@INPROCEEDINGS{11585403,
   author={Leonenkova, Victoria and Shumitskaya, Ekaterina and Vatolin, Dmitriy and Antsiferova, Anastasia},
+  booktitle={2026 IEEE International Conference on Pervasive Computing and Communications Workshops and other Affiliated Events (PerCom Workshops)}, 
+  title={From Pixels to Reality: Physical-Digital Patch Attacks on Real-World Camera}, 
   year={2026},
-  eprint={2603.28425},
-  archivePrefix={arXiv},
-  primaryClass={cs.CV}
-}
+  volume={},
+  number={},
+  pages={412-414},
+  keywords={Faces;Modeling;Cameras;Conferences;Face recognition;Printing;Smart phones;Displays;Pervasive computing;real-world camera;face recognition;adversarial patch;physical attack;digital attack;dodging attack},
+  doi={10.1109/PerComWorkshops68308.2026.11585403}}
 ```
 
-Backbone code and its notices are under `dipa/backbones/`; source revisions are documented in [THIRD_PARTY.md](THIRD_PARTY.md). Model weights have their own upstream terms.
