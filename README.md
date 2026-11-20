@@ -1,6 +1,6 @@
 # DiPA
 
-Script-based implementation of **From Pixels to Reality: Physical-Digital Patch Attacks on Real-World Camera** (Leonenkova et al., 2026).
+Script-based implementation of **From Pixels to Reality: Physical-Digital Patch Attacks on Real-World Camera**.
 
 [Paper](https://ieeexplore.ieee.org/abstract/document/11585403) · [Method details](docs/method.md) · [Weights](weights/README.md) 
 
@@ -81,7 +81,7 @@ python -m unittest discover -s tests -v
 
 Tests cover the objective direction, median gradients, TV, patch placement, checkpoint mapping, model input gradients, reproducible initialization, PNG export/evaluation and camera metric accounting. They use synthetic images and untrained/toy networks; they do not establish the attack success rates reported in the paper.
 
-## Citation and third-party code
+## Citation
 
 ```bibtex
 @INPROCEEDINGS{11585403,
