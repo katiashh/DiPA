@@ -2,7 +2,7 @@
 
 Script-based implementation of **From Pixels to Reality: Physical-Digital Patch Attacks on Real-World Camera** (Leonenkova et al., 2026).
 
-[Paper](https://arxiv.org/abs/2603.28425](https://ieeexplore.ieee.org/abstract/document/11585403) · [Method details](docs/method.md) · [Weights](weights/README.md) 
+[Paper](https://ieeexplore.ieee.org/abstract/document/11585403) · [Method details](docs/method.md) · [Weights](weights/README.md) 
 
 DiPA learns a personalized patch by minimizing the sum of cosine similarities between a patched face and the same clean face across ArcFace, CosFace and MagFace. Median pooling is applied to the patch before compositing. `DiPA+TV` adds isotropic total variation to the objective.
 
