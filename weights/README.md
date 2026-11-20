@@ -1,14 +1,10 @@
 # Checkpoints
 
-Checkpoint files are not included. The paper names model families, but does not identify specific weights or backbone depths. The three paths below are local configuration conventions, not claims about the authors' original checkpoints.
-
 | Configured file | Backend / architecture | Input convention in supplied config |
 |---|---|---|
 | `arcface_r100.pth` | InsightFace / `iresnet100` | RGB, `(x - 0.5) / 0.5` |
 | `cosface_r100.pth` | InsightFace / `iresnet100` | RGB, `(x - 0.5) / 0.5` |
 | `magface_epoch_00025.pth` | Original MagFace / `iresnet100` | BGR, `[0,1]` |
-
-All configured inputs are 112 × 112 and embeddings default to 512 dimensions. Set `architecture` and `embedding_size` to match your checkpoint. Paths are resolved against the current working directory; run from the repository root.
 
 ## Sources
 
