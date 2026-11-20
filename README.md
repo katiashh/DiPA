@@ -6,8 +6,6 @@ Script-based implementation of **From Pixels to Reality: Physical-Digital Patch 
 
 DiPA learns a personalized patch by minimizing the sum of cosine similarities between a patched face and the same clean face across ArcFace, CosFace and MagFace. Median pooling is applied to the patch before compositing. `DiPA+TV` adds isotropic total variation to the objective.
 
-This implementation follows Eqs. (1)–(2) of the supplied paper. The paper does not specify the checkpoints, backbone depths, optimizer, pooling parameters or TV coefficient. The included configurations make these choices explicit; they are **not the recovered experimental configuration for Table I**. The supplied notebook implements a different Sibling-Attack objective. See [the comparison](docs/method.md#changes-from-the-notebook).
-
 ## Install
 
 Python 3.10 or newer. Run commands from this repository's root.
@@ -74,18 +72,6 @@ python evaluate.py --clean outputs/dipa/clean.png --patched outputs/dipa/patch_0
 ```
 
 `evaluate.py` accepts one or more supported local models via the `models` list. Using the same ensemble measures surrogate performance. Transfer evaluation requires an independently trained held-out model. Face++ requests, MobileFaceNet and a proprietary camera connection are not included; the provided files contain no corresponding implementation or credentials. This script scores prepared crops, without detecting and realigning the patched image.
-
-## Camera trials
-
-The paper's protocol is 5 participants × 5 patches × 5 trials per method. Record real measurements in a copy of `examples/camera_trials.csv`; it contains a header only.
-
-```bash
-python summarize_camera.py --csv data/camera_trials.csv --output outputs/camera_summary.json
-```
-
-Use `0`/`1` detection flags and the camera's original confidence scale. An empty `predicted_identity` means no identity was returned. If no face is detected, use `detected=0`, leave the identity empty and record the camera's defined confidence value (use 0 only if that is its convention). A detected but unrecognized face has `detected=1` and an empty identity.
-
-Only trials whose clean image is detected and identified as `expected_identity` are eligible. The script reports excluded clean failures, identity-change rate, detection rate, detected dodging divided by all eligible trials, dodging conditional on detection, and mean face confidence. Identity-change rate counts an empty identity as different; the separate detected-dodging metric prevents detection failures being confused with successful recognition-only dodging. See [camera metric conventions](docs/method.md#camera-metrics).
 
 ## Tests
 
